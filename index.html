@@ -178,6 +178,16 @@
         </tr>
     </table>
 </div>
+<script>
+  // Parse URL query parameters
+  const params = new URLSearchParams(window.location.search);
+
+  // Get the value of 'windspeed' from URL
+  const windspeed = params.get('windspeed') || 'N/A';
+
+  // Set the text of the span with id="windspeed"
+  document.getElementById('windspeed').textContent = windspeed;
+</script>
 
 </body>
 </html>
