@@ -56,43 +56,43 @@
             <th>Date & Time</th>
         </tr>
         <tr>
-            <td>{{line_items_name}}</td>
-            <td>{{line_items_company}}</td>
-            <td>{{line_items_image_signature}}</td>
-            <td>{{line_items_date}}</td>
+            <td><span id="line_items_name"></span></td>
+            <td><span id="line_items_company"></span></td>
+            <td><span id="line_items_image_signature"></span></td>
+            <td><span id="line_items_date"></span></td>
         </tr>
     </table>
 </div>
 
 <div class="section">
     <h2>Part 2. Forecast</h2>
-    <p><span class="bold" id="windspeed">Wind Speed:</span> windspeed</p>
-    <p><span class="bold">Gust Speed:</span> {{gustspeed}}</p>
-    <p><span class="bold">Weather Conditions and Temperature:</span> {{weatherconditions}}</p>
+    <p><span class="bold">Wind Speed:</span> <span id="windspeed"></span></p>
+    <p><span class="bold">Gust Speed:</span> <span id="gustspeed"></span></p>
+    <p><span class="bold">Weather Conditions and Temperature:</span> <span id="weatherconditions"></span></p>
 </div>
 
 <div class="section">
     <h2>Part 3. Site Details</h2>
-    <p><span class="bold">First Aider Name:</span> {{first_aider}}</p>
-    <p><span class="bold">Location:</span> {{site_location}}</p>
-    <p><span class="bold">Muster point Location:</span> {{muster_point}}</p>
+    <p><span class="bold">First Aider Name:</span> <span id="first_aider"></span></p>
+    <p><span class="bold">Location:</span> <span id="site_location"></span></p>
+    <p><span class="bold">Muster point Location:</span> <span id="muster_point"></span></p>
     <p>Please consider the complexity of lifting activity throughout the day inclusive of the weather forecast, amount of planned and unplanned lifts, labour requirements and any new starters today. If this risk rating is high, then review the operations planned for the day with the site management team.</p>
 </div>
 
 <div class="section">
     <h2>Changes</h2>
-    <p>{{changes}}</p>
+    <p><span id="changes"></span></p>
 </div>
 
 <div class="section">
     <h2>Any Other Business</h2>
-    <p>{{anyotherbusiness}}</p>
+    <p><span id="anyotherbusiness"></span></p>
 </div>
 
 <div class="section">
     <h2>Lifting Schedule</h2>
     <p>Today's Sub-Contractor/Main Contractor Lifting requirements:</p>
-    <p>{{lifting_schedule}}</p>
+    <p><span id="lifting_schedule"></span></p>
     <p class="bold">Confirm Whistles are working before work commence.</p>
 </div>
 
@@ -107,39 +107,39 @@
     <table>
         <tr>
             <td>Is everyone clear on which crane they are responsible for?</td>
-            <td class="tick-column">{{q1}}</td>
+            <td class="tick-column"><span id="q1"></span></td>
         </tr>
         <tr>
             <td>Are all activities planned?</td>
-            <td class="tick-column">{{q2}}</td>
+            <td class="tick-column"><span id="q2"></span></td>
         </tr>
         <tr>
             <td>Are all expected deliveries scheduled?</td>
-            <td class="tick-column">{{q3}}</td>
+            <td class="tick-column"><span id="q3"></span></td>
         </tr>
         <tr>
             <td>Have you communicated any site / environmental changes?</td>
-            <td class="tick-column">{{q4}}</td>
+            <td class="tick-column"><span id="q4"></span></td>
         </tr>
         <tr>
             <td>Have you reminded everyone to carry out the daily pre-use accessory checks?</td>
-            <td class="tick-column">{{q5}}</td>
+            <td class="tick-column"><span id="q5"></span></td>
         </tr>
         <tr>
             <td>Is everyone clear on ‘Safety First’, if unsure stop the lifting operation and re-assess?</td>
-            <td class="tick-column">{{q6}}</td>
+            <td class="tick-column"><span id="q6"></span></td>
         </tr>
         <tr>
             <td>Is tower crane secured each floor for unauthorized personnel to access the crane?</td>
-            <td class="tick-column">{{q7}}</td>
+            <td class="tick-column"><span id="q7"></span></td>
         </tr>
         <tr>
             <td>Do all Slinger/Crane Supervisor have handheld Whistles and checked they are working?</td>
-            <td class="tick-column">{{q8}}</td>
+            <td class="tick-column"><span id="q8"></span></td>
         </tr>
         <tr>
             <td>Has a radio check been completed for all lifting operatives?</td>
-            <td class="tick-column">{{q9}}</td>
+            <td class="tick-column"><span id="q9"></span></td>
         </tr>
     </table>
 </div>
@@ -155,35 +155,14 @@
         <li>Dangerous occurrence and reportable accidents.</li>
         <li>Report any radio communication issues to the principal contractor.</li>
     </ul>
-    <p>Contact: {{email}}</p>
+    <p>Contact: <span id="email"></span></p>
 </div>
 
 <div class="section">
-    <p><span class="bold">Appointed Person Resident:</span> {{ap}}</p>
-    <p><span class="bold">Lifting Supervisor:</span> {{sup}}</p>
+    <p><span class="bold">Appointed Person Resident:</span> <span id="ap"></span></p>
+    <p><span class="bold">Lifting Supervisor:</span> <span id="sup"></span></p>
 </div>
 
 <div class="section">
     <h2>Supervisor Sign-off</h2>
     <table>
-        <tr>
-            <th>Date</th>
-            <th>Name</th>
-            <th>Signature</th>
-        </tr>
-        <tr>
-            <td>{{supervisordate}}</td>
-            <td>{{supervisorname}}</td>
-            <td>{{image_logo_sup}}</td>
-        </tr>
-    </table>
-</div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const windspeed = params.get('windspeed') || 'N/A';
-  document.getElementById('windspeed').textContent = windspeed;
-</script>
-
-
-</body>
-</html>
