@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Team Briefing: Lifting Operations</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        color: #333;
+        line-height: 1.6;
+    }
+    h1, h2, h3 {
+        color: #003366;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    td, th {
+        border: 1px solid #ccc;
+        padding: 8px;
+        vertical-align: top;
+    }
+    .section {
+        margin-bottom: 30px;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .tick-column {
+        width: 30px;
+        text-align: center;
+    }
+    .instructions {
+        background-color: #f2f2f2;
+        padding: 10px;
+        border-left: 4px solid #003366;
+        margin: 10px 0;
+    }
+</style>
+</head>
+<body>
+
+<h1>Daily Team Briefing: Lifting Operations</h1>
+
+<div class="section">
+    <h2>Attendees:</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Signature</th>
+            <th>Date & Time</th>
+        </tr>
+        <tr>
+            <td>{{line_items_name}}</td>
+            <td>{{line_items_company}}</td>
+            <td>{{line_items_image_signature}}</td>
+            <td>{{line_items_date}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>Part 2. Forecast</h2>
+    <p><span class="bold">Wind Speed:</span> {{windspeed}}</p>
+    <p><span class="bold">Gust Speed:</span> {{gustspeed}}</p>
+    <p><span class="bold">Weather Conditions and Temperature:</span> {{weatherconditions}}</p>
+</div>
+
+<div class="section">
+    <h2>Part 3. Site Details</h2>
+    <p><span class="bold">First Aider Name:</span> {{first_aider}}</p>
+    <p><span class="bold">Location:</span> {{site_location}}</p>
+    <p><span class="bold">Muster point Location:</span> {{muster_point}}</p>
+    <p>Please consider the complexity of lifting activity throughout the day inclusive of the weather forecast, amount of planned and unplanned lifts, labour requirements and any new starters today. If this risk rating is high, then review the operations planned for the day with the site management team.</p>
+</div>
+
+<div class="section">
+    <h2>Changes</h2>
+    <p>{{changes}}</p>
+</div>
+
+<div class="section">
+    <h2>Any Other Business</h2>
+    <p>{{anyotherbusiness}}</p>
+</div>
+
+<div class="section">
+    <h2>Lifting Schedule</h2>
+    <p>Today's Sub-Contractor/Main Contractor Lifting requirements:</p>
+    <p>{{lifting_schedule}}</p>
+    <p class="bold">Confirm Whistles are working before work commence.</p>
+</div>
+
+<div class="instructions">
+    During a blind lift, there should be CONSTANT CLEAR COMMUNICATION. If the Slinger, Crane Supervisor stops giving instruction, the Crane Operator MUST cease operations until clear, stable communication has been re-established.
+    <br><br>
+    <strong>ENSURE DAILY ZONING AND ANTI-COLLISION CHECKS ARE UNDERTAKEN PRIOR TO START OF LIFTING OPERATIONS</strong>
+</div>
+
+<div class="section">
+    <h2>Have you covered the following?</h2>
+    <table>
+        <tr>
+            <td>Is everyone clear on which crane they are responsible for?</td>
+            <td class="tick-column">{{q1}}</td>
+        </tr>
+        <tr>
+            <td>Are all activities planned?</td>
+            <td class="tick-column">{{q2}}</td>
+        </tr>
+        <tr>
+            <td>Are all expected deliveries scheduled?</td>
+            <td class="tick-column">{{q3}}</td>
+        </tr>
+        <tr>
+            <td>Have you communicated any site / environmental changes?</td>
+            <td class="tick-column">{{q4}}</td>
+        </tr>
+        <tr>
+            <td>Have you reminded everyone to carry out the daily pre-use accessory checks?</td>
+            <td class="tick-column">{{q5}}</td>
+        </tr>
+        <tr>
+            <td>Is everyone clear on ‘Safety First’, if unsure stop the lifting operation and re-assess?</td>
+            <td class="tick-column">{{q6}}</td>
+        </tr>
+        <tr>
+            <td>Is tower crane secured each floor for unauthorized personnel to access the crane?</td>
+            <td class="tick-column">{{q7}}</td>
+        </tr>
+        <tr>
+            <td>Do all Slinger/Crane Supervisor have handheld Whistles and checked they are working?</td>
+            <td class="tick-column">{{q8}}</td>
+        </tr>
+        <tr>
+            <td>Has a radio check been completed for all lifting operatives?</td>
+            <td class="tick-column">{{q9}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>Reporting of defects and incidents</h2>
+    <p>The appointed person should ensure that there is an effective procedure for reporting defects and incidents. This should include immediate notification of:</p>
+    <ul>
+        <li>Any defects found during daily and weekly checks.</li>
+        <li>Defects found at any other time.</li>
+        <li>Incidents, accidents or near misses however slight.</li>
+        <li>Shock loads, however, they occur.</li>
+        <li>Dangerous occurrence and reportable accidents.</li>
+        <li>Report any radio communication issues to the principal contractor.</li>
+    </ul>
+    <p>Contact: {{email}}</p>
+</div>
+
+<div class="section">
+    <p><span class="bold">Appointed Person Resident:</span> {{ap}}</p>
+    <p><span class="bold">Lifting Supervisor:</span> {{sup}}</p>
+</div>
+
+<div class="section">
+    <h2>Supervisor Sign-off</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Signature</th>
+        </tr>
+        <tr>
+            <td>{{supervisordate}}</td>
+            <td>{{supervisorname}}</td>
+            <td>{{image_logo_sup}}</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
