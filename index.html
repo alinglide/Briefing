@@ -47,22 +47,108 @@
 <h1>Daily Team Briefing: Lifting Operations</h1>
 
 <div class="section">
+    <h2>Attendees:</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Signature</th>
+            <th>Date & Time</th>
+        </tr>
+        <tr>
+            <td><span id="line_items_name"></span></td>
+            <td><span id="line_items_company"></span></td>
+            <td><span id="line_items_image_signature"></span></td>
+            <td><span id="line_items_date"></span></td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
     <h2>Part 2. Forecast</h2>
     <p><span class="bold">Wind Speed:</span> <span id="windspeed"></span></p>
     <p><span class="bold">Gust Speed:</span> <span id="gustspeed"></span></p>
     <p><span class="bold">Weather Conditions and Temperature:</span> <span id="weatherconditions"></span></p>
 </div>
 
-<!-- Add more sections as needed -->
+<div class="section">
+    <h2>Part 3. Site Details</h2>
+    <p><span class="bold">First Aider Name:</span> <span id="first_aider"></span></p>
+    <p><span class="bold">Location:</span> <span id="site_location"></span></p>
+    <p><span class="bold">Muster point Location:</span> <span id="muster_point"></span></p>
+</div>
 
-<!-- Simple script to replace placeholders -->
+<div class="section">
+    <h2>Changes</h2>
+    <p><span id="changes"></span></p>
+</div>
+
+<div class="section">
+    <h2>Any Other Business</h2>
+    <p><span id="anyotherbusiness"></span></p>
+</div>
+
+<div class="section">
+    <h2>Lifting Schedule</h2>
+    <p>Today's Sub-Contractor/Main Contractor Lifting requirements:</p>
+    <p><span id="lifting_schedule"></span></p>
+    <p class="bold">Confirm Whistles are working before work commence.</p>
+</div>
+
+<div class="instructions">
+    During a blind lift, there should be CONSTANT CLEAR COMMUNICATION...
+</div>
+
+<div class="section">
+    <h2>Have you covered the following?</h2>
+    <table>
+        <tr><td>Is everyone clear on which crane they are responsible for?</td><td class="tick-column"><span id="q1"></span></td></tr>
+        <tr><td>Are all activities planned?</td><td class="tick-column"><span id="q2"></span></td></tr>
+        <tr><td>Are all expected deliveries scheduled?</td><td class="tick-column"><span id="q3"></span></td></tr>
+        <tr><td>Have you communicated any site / environmental changes?</td><td class="tick-column"><span id="q4"></span></td></tr>
+        <tr><td>Have you reminded everyone to carry out the daily pre-use accessory checks?</td><td class="tick-column"><span id="q5"></span></td></tr>
+        <tr><td>Is everyone clear on ‘Safety First’, if unsure stop the lifting operation and re-assess?</td><td class="tick-column"><span id="q6"></span></td></tr>
+        <tr><td>Is tower crane secured each floor for unauthorized personnel to access the crane?</td><td class="tick-column"><span id="q7"></span></td></tr>
+        <tr><td>Do all Slinger/Crane Supervisor have handheld Whistles and checked they are working?</td><td class="tick-column"><span id="q8"></span></td></tr>
+        <tr><td>Has a radio check been completed for all lifting operatives?</td><td class="tick-column"><span id="q9"></span></td></tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>Reporting of defects and incidents</h2>
+    <p>Contact: <span id="email"></span></p>
+</div>
+
+<div class="section">
+    <p><span class="bold">Appointed Person Resident:</span> <span id="ap"></span></p>
+    <p><span class="bold">Lifting Supervisor:</span> <span id="sup"></span></p>
+</div>
+
+<div class="section">
+    <h2>Supervisor Sign-off</h2>
+    <table>
+        <tr><th>Date</th><th>Name</th><th>Signature</th></tr>
+        <tr>
+            <td><span id="supervisordate"></span></td>
+            <td><span id="supervisorname"></span></td>
+            <td><span id="image_logo_sup"></span></td>
+        </tr>
+    </table>
+</div>
+
 <script>
 const params = new URLSearchParams(window.location.search);
-["windspeed", "gustspeed", "weatherconditions"].forEach(id => {
+[
+    "windspeed","gustspeed","weatherconditions",
+    "first_aider","site_location","muster_point",
+    "changes","anyotherbusiness","lifting_schedule",
+    "email","ap","sup","supervisordate","supervisorname",
+    "image_logo_sup","line_items_name","line_items_company",
+    "line_items_image_signature","line_items_date",
+    "q1","q2","q3","q4","q5","q6","q7","q8","q9"
+].forEach(id => {
     const el = document.getElementById(id);
-    if (el) {
-        el.textContent = params.get(id) || '';
-    }
+    if (el) el.textContent = params.get(id) || '';
 });
 </script>
 
