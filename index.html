@@ -66,7 +66,7 @@
 
 <div class="section">
     <h2>Part 2. Forecast</h2>
-    <p><span class="bold">Wind Speed:</span>windspeed</p>
+    <p><span class="bold" id="windspeed">Wind Speed:</span> windspeed</p>
     <p><span class="bold">Gust Speed:</span> {{gustspeed}}</p>
     <p><span class="bold">Weather Conditions and Temperature:</span> {{weatherconditions}}</p>
 </div>
@@ -179,15 +179,11 @@
     </table>
 </div>
 <script>
-  // Parse URL query parameters
   const params = new URLSearchParams(window.location.search);
-
-  // Get the value of 'windspeed' from URL
   const windspeed = params.get('windspeed') || 'N/A';
-
-  // Set the text of the span with id="windspeed"
   document.getElementById('windspeed').textContent = windspeed;
 </script>
+
 
 </body>
 </html>
