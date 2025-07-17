@@ -5,146 +5,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daily Team Briefing: Lifting Operations</title>
 <style>
-  body { font-family: Arial, sans-serif; margin: 20px; color: #333; line-height: 1.6; }
-  h1, h2, h3 { color: #003366; }
+  body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
+  h1, h2 { color: #003366; margin-bottom: 10px; }
   table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
   td, th { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
-  .section { margin-bottom: 30px; }
+  th { background-color: #e6f0fa; text-align: left; }
   .bold { font-weight: bold; }
-  .tick-column { width: 30px; text-align: center; }
   .instructions { background-color: #f2f2f2; padding: 10px; border-left: 4px solid #003366; margin: 10px 0; }
-  img.signature { max-height: 50px; }
+  .signature { max-height: 50px; }
 </style>
 </head>
 <body>
 
 <h1>Daily Team Briefing: Lifting Operations</h1>
 
-<div class="section">
-  <h2>Attendees:</h2>
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Company</th>
-      <th>Signature</th>
-      <th>Date & Time</th>
-    </tr>
-    <tr>
-      <td id="line_items_name"></td>
-      <td id="line_items_company"></td>
-      <td><img id="line_items_image_signature" class="signature" src="" alt="Signature"></td>
-      <td id="line_items_date"></td>
-    </tr>
-  </table>
-</div>
+<h2>Attendees</h2>
+<table>
+  <tr><th>Role</th><th>Name</th><th>Company</th><th>Signature</th><th>Date & Time</th></tr>
+  <tr>
+    <td id="line_items_role"></td>
+    <td id="line_items_name"></td>
+    <td id="line_items_company"></td>
+    <td><img id="line_items_image_signature" class="signature" src="" alt="Signature"></td>
+    <td id="line_items_date"></td>
+  </tr>
+</table>
 
-<div class="section">
-  <h2>Part 2. Forecast</h2>
-  <p><span class="bold">Wind Speed:</span> <span id="windspeed"></span></p>
-  <p><span class="bold">Gust Speed:</span> <span id="gustspeed"></span></p>
-  <p><span class="bold">Weather Conditions and Temperature:</span> <span id="weatherconditions"></span></p>
-</div>
+<h2>Part 2. Forecast</h2>
+<table>
+  <tr><td class="bold">Forecast Wind Speed</td><td id="windspeed"></td></tr>
+  <tr><td class="bold">Forecast Gust Speed</td><td id="gustspeed"></td></tr>
+  <tr><td class="bold">Forecast Weather Conditions and Temperature</td><td id="weatherconditions"></td></tr>
+</table>
 
-<div class="section">
-  <h2>Part 3. Site Details</h2>
-  <p><span class="bold">First Aider Name:</span> <span id="first_aider"></span></p>
-  <p><span class="bold">Location:</span> <span id="site_location"></span></p>
-  <p><span class="bold">Muster point Location:</span> <span id="muster_point"></span></p>
-  <p>Please consider the complexity of lifting activity throughout the day inclusive of the weather forecast, amount of planned and unplanned lifts, labour requirements and any new starters today. If this risk rating is high, then review the operations planned for the day with the site management team.</p>
-</div>
+<h2>Part 3. Site Details</h2>
+<table>
+  <tr><td class="bold">First Aider Name</td><td id="first_aider"></td></tr>
+  <tr><td class="bold">Location</td><td id="site_location"></td></tr>
+  <tr><td class="bold">Muster point Location</td><td id="muster_point"></td></tr>
+</table>
+<p>Please consider the complexity of lifting activity throughout the day inclusive of the weather forecast, amount of planned and unplanned lifts, labour requirements and any new starters today. If this risk rating is high, then review the operations planned for the day with the site management team.</p>
 
-<div class="section">
-  <h2>Changes</h2>
-  <p id="changes"></p>
-</div>
+<h2>Changes</h2>
+<p id="changes"></p>
 
-<div class="section">
-  <h2>Any Other Business</h2>
-  <p id="anyotherbusiness"></p>
-</div>
+<h2>Any Other Business</h2>
+<p id="anyotherbusiness"></p>
 
-<div class="section">
-  <h2>Lifting Schedule</h2>
-  <p>Today's Sub-Contractor/Main Contractor Lifting requirements:</p>
-  <p id="lifting_schedule"></p>
-  <p class="bold">Confirm Whistles are working before work commence.</p>
-</div>
+<h2>Lifting Schedule</h2>
+<p>Todays’ Sub-Contractor/ Main contractor Lifting requirements:</p>
+<p id="lifting_schedule"></p>
+<p class="bold">Confirm Whistles are working before work commence.</p>
 
 <div class="instructions">
-  During a blind lift, there should be CONSTANT CLEAR COMMUNICATION. If the Slinger, Crane Supervisor stops giving instruction, the Crane Operator MUST cease operations until clear, stable communication has been re-established.
+  During a blind lift, should be CONSTANT CLEAR COMMUNICATION. If the Slinger, Crane Supervisor stops giving instruction the Crane Operator MUST cease operations until clear, stable communication has been re-established.
   <br><br>
   <strong>ENSURE DAILY ZONING AND ANTI-COLLISION CHECKS ARE UNDERTAKEN PRIOR TO START OF LIFTING OPERATIONS</strong>
 </div>
 
-<div class="section">
-  <h2>Have you covered the following?</h2>
-  <table>
-    <tr><td>Is everyone clear on which crane they are responsible for?</td><td class="tick-column" id="q1"></td></tr>
-    <tr><td>Are all activities planned?</td><td class="tick-column" id="q2"></td></tr>
-    <tr><td>Are all expected deliveries scheduled?</td><td class="tick-column" id="q3"></td></tr>
-    <tr><td>Have you communicated any site / environmental changes?</td><td class="tick-column" id="q4"></td></tr>
-    <tr><td>Have you reminded everyone to carry out the daily pre-use accessory checks?</td><td class="tick-column" id="q5"></td></tr>
-    <tr><td>Is everyone clear on ‘Safety First’, if unsure stop the lifting operation and re-assess?</td><td class="tick-column" id="q6"></td></tr>
-    <tr><td>Is tower crane secured each floor for unauthorized personnel to access the crane?</td><td class="tick-column" id="q7"></td></tr>
-    <tr><td>Do all Slinger/Crane Supervisor have handheld Whistles and checked they are working?</td><td class="tick-column" id="q8"></td></tr>
-    <tr><td>Has a radio check been completed for all lifting operatives?</td><td class="tick-column" id="q9"></td></tr>
-  </table>
-</div>
+<h2>Have you covered the following?</h2>
+<table>
+  <tr><td>Is everyone clear on which crane they are responsible for?</td><td id="q1"></td></tr>
+  <tr><td>Are all activities planned?</td><td id="q2"></td></tr>
+  <tr><td>Are all expected deliveries scheduled?</td><td id="q3"></td></tr>
+  <tr><td>Have you communicated any site / environmental changes?</td><td id="q4"></td></tr>
+  <tr><td>Have you reminded everyone to carry out the daily pre-use accessory checks?</td><td id="q5"></td></tr>
+  <tr><td>Is everyone clear on ‘Safety First’, if unsure stop the lifting operation and re-assess?</td><td id="q6"></td></tr>
+  <tr><td>Is tower crane secured each floor for unauthorized personnel to access the crane?</td><td id="q7"></td></tr>
+  <tr><td>Do all Slinger/Crane Supervisor have handheld Whistles and checked they are working?</td><td id="q8"></td></tr>
+  <tr><td>Has a radio check been completed for all lifting operatives?</td><td id="q9"></td></tr>
+</table>
 
-<div class="section">
-  <h2>Reporting of defects and incidents</h2>
-  <p>The appointed person should ensure that there is an effective procedure for reporting defects and incidents. This should include immediate notification of:</p>
-  <ul>
-    <li>Any defects found during daily and weekly checks.</li>
-    <li>Defects found at any other time.</li>
-    <li>Incidents, accidents or near misses however slight.</li>
-    <li>Shock loads, however, they occur.</li>
-    <li>Dangerous occurrence and reportable accidents.</li>
-    <li>Report any radio communication issues to the principal contractor.</li>
-  </ul>
-  <p>Contact: <span id="email"></span></p>
-</div>
+<h2>Reporting of defects and incidents</h2>
+<p>The appointed person should ensure that there is an effective procedure for reporting defects and incidents. This should include immediate notification of:</p>
+<ul>
+  <li>Any defects found during daily and weekly checks.</li>
+  <li>Defects found at any other time.</li>
+  <li>Incidents, accidents or near misses however slight.</li>
+  <li>Shock loads, however, they occur.</li>
+  <li>Dangerous occurrence and reportable accidents.</li>
+  <li>Report any radio communication issues to the principal contractor.</li>
+</ul>
+<p>Contact: <span id="email"></span></p>
 
-<div class="section">
-  <p><span class="bold">Appointed Person Resident:</span> <span id="ap"></span></p>
-  <p><span class="bold">Lifting Supervisor:</span> <span id="sup"></span></p>
-</div>
+<h2>Sign-off</h2>
+<table>
+  <tr><td class="bold">Appointed Person Resident</td><td id="ap"></td></tr>
+  <tr><td class="bold">Lifting Supervisor</td><td id="sup"></td></tr>
+</table>
 
-<div class="section">
-  <h2>Supervisor Sign-off</h2>
-  <table>
-    <tr>
-      <th>Date</th>
-      <th>Name</th>
-      <th>Signature</th>
-    </tr>
-    <tr>
-      <td id="supervisordate"></td>
-      <td id="supervisorname"></td>
-      <td><img id="image_logo_sup" class="signature" src="" alt="Supervisor Signature"></td>
-    </tr>
-  </table>
-</div>
+<table>
+  <tr><th>Date</th><th>Name</th><th>Signature</th></tr>
+  <tr>
+    <td id="supervisordate"></td>
+    <td id="supervisorname"></td>
+    <td><img id="image_logo_sup" class="signature" src="" alt="Supervisor Signature"></td>
+  </tr>
+</table>
 
 <script>
-  const params = new URLSearchParams(window.location.search);
-  const fields = [
-    'windspeed','gustspeed','weatherconditions','first_aider','site_location','muster_point',
-    'changes','anyotherbusiness','lifting_schedule','q1','q2','q3','q4','q5','q6','q7','q8','q9',
-    'email','ap','sup','supervisordate','supervisorname','line_items_name','line_items_company','line_items_date'
-  ];
+const params = new URLSearchParams(window.location.search);
+const fields = [
+  'line_items_role','line_items_name','line_items_company','line_items_date','windspeed','gustspeed','weatherconditions',
+  'first_aider','site_location','muster_point','changes','anyotherbusiness','lifting_schedule',
+  'q1','q2','q3','q4','q5','q6','q7','q8','q9','email','ap','sup','supervisordate','supervisorname'
+];
+fields.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.textContent = params.get(id) || '';
+});
 
-  fields.forEach(id => {
-    const value = params.get(id) || '';
-    document.getElementById(id).textContent = value;
-  });
+// Images
+const sig1 = params.get('image_logo_sup');
+if(sig1) document.getElementById('image_logo_sup').src = sig1;
 
-  // For images
-  const image_logo_sup = params.get('image_logo_sup');
-  if (image_logo_sup) document.getElementById('image_logo_sup').src = image_logo_sup;
-
-  const line_items_image_signature = params.get('line_items_image_signature');
-  if (line_items_image_signature) document.getElementById('line_items_image_signature').src = line_items_image_signature;
+const sig2 = params.get('line_items_image_signature');
+if(sig2) document.getElementById('line_items_image_signature').src = sig2;
 </script>
 
 </body>
